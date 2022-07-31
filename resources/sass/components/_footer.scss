@@ -1,0 +1,146 @@
+footer {
+    width: 100%;
+    background-color: $lightBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    .logoContainer {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .icons {
+        border-bottom: 1px solid white;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .creditCards, .socialMedias {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        color: white;
+    }
+
+    .creditCard, .socialMedia { 
+        padding-right: 10px;
+    }
+
+    .socialMedia:last-child {
+        padding-right: 0px;
+    }
+
+    .socialMedia a {
+        color: white;
+    }
+
+    a {
+        transition: color 0.3s ease-in-out;
+    }
+
+    .termsAndCond {
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+        font-size: map-get($font-size-phone , 's');
+    }
+
+    .termsAndCond > a {
+        color: white;
+    }
+
+    @media (hover:hover) {
+
+        a:hover {
+            color: $darkBlue;
+        }
+
+        .termsAndCond a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a:active {
+        color: $darkBlue;
+    }
+
+    .termsAndCond a:active {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    footer {
+        padding: 15px;
+    
+        .logoContainer {
+            width: 170px;
+            height: 50px;
+            margin: 15px 0px;
+        }
+    
+        .icons {
+            padding: 15px;
+        }
+    
+        .creditCards, .socialMedias {
+            font-size: 20px;
+        }
+    
+        .creditCard, .socialMedia { 
+            padding-right: 15px;
+        }
+    
+        .termsAndCond {
+            padding-top: 15px;
+            font-size: map-get($font-size-tablet , 's');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    footer {
+        padding: 20px;
+    
+        .logoContainer {
+            width: 250px;
+            height: 80px;
+            margin: 20px 0px;
+        }
+    
+        .icons {
+            padding: 20px;
+        }
+    
+        .creditCards, .socialMedias {
+            font-size: 25px;
+        }
+    
+        .creditCard, .socialMedia { 
+            padding-right: 20px;
+        }
+    
+        .termsAndCond {
+            padding-top: 20px;
+            font-size: map-get($font-size-pc , 's');
+        }
+    }
+}

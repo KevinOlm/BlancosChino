@@ -1,0 +1,177 @@
+.mailForm {
+    margin: 0px auto;
+    width: clamp(240px, 100%, 400px);
+
+    form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: 2px solid $lightBlue;
+        padding: 10px;
+        font-family: 'Caviar Dreams';
+        font-size: map-get($map: $font-size-phone, $key: 's');
+    }
+
+    input {
+        height: 35px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 35px;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        text-align: right;
+        margin-bottom: 5px;
+    }
+
+    button {
+        width: 100%;
+        height: 35px;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+    }
+
+    .disabled {
+        background-color: $lightGray;
+        color: $black;
+    }
+
+    .enabled {
+        background-color: $lightBlue;
+        color: white;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    @media (hover: hover) {
+        
+        .enabled:hover {
+            background-color: $darkBlue;
+        }
+    }
+
+    .enabled:active {
+        background-color: $darkBlue;
+    }
+
+    .inputContainer {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .messageContainer {
+        margin-bottom: 20px;
+    }
+
+    .error {
+        width: 100%;
+        text-align: right;
+        font-size: map-get($map: $font-size-phone, $key: 'xs');
+        margin-top: 5px;
+        color: red;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .mailForm {
+        width: clamp(240px, 100%, 700px);
+    
+        input, textarea {
+            border: 3px solid $lightBlue;
+            padding: 15px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+    
+        input {
+            height: 50px;
+        }
+    
+        textarea {
+            min-height: 50px;
+        }
+    
+        label {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 5px;
+        }
+    
+        button {
+            height: 50px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+
+        .inputContainer {
+            margin-bottom: 15px;
+        }
+
+        .nameContainer {
+            width: 50%;
+            padding-right: 10px;
+        }
+
+        .emailContainer {
+            width: 50%;
+            padding-left: 10px;
+        }
+    
+        .messageContainer {
+            margin-bottom: 30px;
+        }
+
+        .error {
+            font-size: map-get($map: $font-size-tablet, $key: 'xs');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .mailForm {
+        width: clamp(240px, 100%, 1000px);
+    
+        input, textarea {
+            padding: 20px;
+            font-size: map-get($map: $font-size-pc, $key: 's');
+        }
+    
+        label {
+            font-size: map-get($map: $font-size-pc, $key: 's');
+        }
+    
+        button {
+            font-size: map-get($map: $font-size-pc, $key: 's');
+        }
+
+        .nameContainer, .subjectContainer , .emailContainer {
+            width: 33.33%;
+            padding: 0px;
+        }
+
+        .nameContainer {
+            padding-right: 15px;
+        }
+
+        .subjectContainer {
+            padding-left: 15px;
+        }
+
+        .emailContainer {
+            padding: 0px 5px;
+        }
+
+        .error {
+            font-size: map-get($map: $font-size-pc, $key: 'xs');
+        }
+    }
+}

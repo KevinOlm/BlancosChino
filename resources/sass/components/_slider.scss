@@ -1,0 +1,197 @@
+/*General slider styles*/
+.slider {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    /*Radio button*/
+    .radioButton {
+        display: none;
+    }
+
+    /*Radio button when active*/
+    #radioButton1:checked ~ .manualNavigation #manualButton1 {
+        background-color: $lightBlue;
+    }
+
+    #radioButton1:checked ~ .sliderImages {
+        left: 0%;
+    }
+
+    #radioButton2:checked ~ .manualNavigation #manualButton2 {
+        background-color: $lightBlue;
+    }
+
+    #radioButton2:checked ~ .sliderImages {
+        left: -100%;
+    }
+
+    #radioButton3:checked ~ .manualNavigation #manualButton3 {
+        background-color: $lightBlue;
+    }
+
+    #radioButton3:checked ~ .sliderImages {
+        left: -200%;
+    }
+
+    /*The images container*/
+    .sliderImages {
+        width: 300%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        transition: 1s ease-in-out;
+    }
+
+    /*A single image container*/
+    .imageContainer {
+        width: 33.33%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .text {
+        position: absolute;
+        z-index: 2;
+        top: 20px;
+        right: 10px;
+        width: 50%;
+        text-align: right;
+        color: white;
+    }
+
+    .text-center {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 50%;
+        text-align: center;
+        color: white;
+    }
+
+    .text-center .mainTitle {
+        font-size: map-get($map: $font-size-phone, $key: 'xl');
+        font-weight: 600;
+    }
+
+    .imgCredits {
+        max-width: 90%;
+        overflow: auto;
+        color: white;
+        font-size: map-get($font-size-phone , 'xs');
+        text-align: left;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 2;
+    }
+
+    .sliderTitle {
+        font-family: 'Cinzel', serif;
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+        margin-bottom: 10px;
+    }
+
+    .sliderParagraph {
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+
+    .imageBlurry {
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 40%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    /*The manual navigation buttons container*/
+    .manualNavigation {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    /*Each navigation button*/
+    .manualButton {
+        cursor: pointer;
+        background-color: white;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .manualButton:last-child {
+        margin-right: 0px;
+    }
+
+    @media (hover: hover) {
+            
+        .manualButton:hover {
+            background-color: $darkBlue;
+        }
+    }
+
+    .manualButton:active {
+        background-color: $darkBlue;
+    }
+}
+
+@media (min-width: 768px){
+    .slider {
+        height: 500px;
+
+        .text {
+            top: 40px;
+            right: 15px;
+            width: 35%;
+        }
+
+        .text-center .mainTitle {
+            font-size: map-get($map: $font-size-pc, $key: 'xl');
+        }
+
+        .imgCredits {
+            font-size: map-get($font-size-tablet , 'xs');
+        }
+    
+        .sliderTitle {
+            font-size: map-get($map: $font-size-tablet, $key: 'l');
+            margin-bottom: 15px;
+        }
+    
+        .sliderParagraph {
+            font-size: map-get($map: $font-size-tablet, $key: 'm');
+        }
+
+        .manualNavigation {
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .manualButton {
+            width: 15px;
+            height: 15px;
+            margin-right: 15px;
+        }
+    }
+}

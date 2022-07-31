@@ -1,0 +1,181 @@
+.spetialOffer {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        transition: filter 0.3s ease-in-out;
+    }
+    
+    @media (hover: hover) {
+        
+        a:hover {
+            filter: brightness(1.3);
+        }
+    }
+
+    a:active {
+        filter: brightness(1.3);
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blurry {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background-color: $black;
+        opacity: 40%;
+    }
+
+    .text {
+        width: 70%;
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        right: 10px;
+        text-align: right;
+        color: white;
+    }
+
+    h4 {
+        font-family: 'Cinzel', serif;
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .rateIcons {
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .rateIcon {
+        margin-right: 3px;
+    }
+
+    .size {
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        margin-bottom: 10px;
+    }
+
+    .prices {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .price {
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+    }
+
+    .oldPrice {
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        text-decoration: line-through;
+        margin-bottom: 5px;
+    }
+}
+
+.spetialOffer:last-child {
+    margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .spetialOffer {
+        width: clamp(335px, 50%, 50%);
+        height: 500px;
+        overflow: hidden;
+        margin-right: 15px;
+        margin-bottom: 0px;
+    
+        .text {
+            bottom: 15px;
+            right: 15px;
+        }
+    
+        h4 {
+            font-size: map-get($map: $font-size-phone, $key: 'l');
+            margin-bottom: 15px;
+        }
+    
+        .rateIcons {
+            font-size: map-get($map: $font-size-phone, $key: 's');
+            margin-bottom: 15px;
+        }
+    
+        .rateIcon {
+            margin-right: 5px;
+        }
+    
+        .size {
+            font-size: map-get($map: $font-size-phone, $key: 'm');
+            margin-bottom: 15px;
+        }
+    
+        .price {
+            font-size: map-get($map: $font-size-phone, $key: 'l');
+        }
+    
+        .oldPrice {
+            font-size: map-get($map: $font-size-phone, $key: 's');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .spetialOffer {
+        margin-right: 20px;
+    
+        .text {
+            bottom: 20px;
+            right: 20px;
+        }
+    
+        h4 {
+            font-size: map-get($map: $font-size-tablet, $key: 'm');
+            margin-bottom: 20px;
+        }
+    
+        .rateIcons {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 20px;
+        }
+    
+        .rateIcon {
+            margin-right: 5px;
+        }
+    
+        .size {
+            font-size: map-get($map: $font-size-tablet, $key: 'm');
+            margin-bottom: 20px;
+        }
+    
+        .price {
+            font-size: map-get($map: $font-size-tablet, $key: 'l');
+        }
+    
+        .oldPrice {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+    }
+}

@@ -1,0 +1,276 @@
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewsContainer {
+    width: 100%;
+    min-width: 240px;
+    max-width: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewsTitle {
+    text-align: center;
+    width: 100%;
+}
+
+.userComments {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+.userComment {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $lightBlue;
+    direction: ltr;
+}
+
+.userName {
+    font-size: map-get($map: $font-size-phone, $key: 'm');
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.userRate {
+    justify-content: center;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    color: $darkBlue;
+    font-size: map-get($map: $font-size-phone, $key: 'm');
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.newRate {
+    color: $lightGray;
+    justify-content: center;
+    direction: rtl;
+
+    .rateIcon {
+        margin-right: 0px;
+        margin-left: 3px;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .rateIcon:last-child {
+        margin-left: 0px;
+    }
+}
+
+input:not(:checked) ~ .rateIcon:hover,
+input:not(:checked) ~ .rateIcon:hover ~ .rateIcon {
+    color: $lightBlue;
+}
+
+input:checked ~ .rateIcon {
+    color: $lightBlue;
+}
+
+.comment {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.rateInput {
+    display: none;
+}
+
+.newComment {
+    width: 100%;
+}
+
+#newCommentField {
+    width: 100%;
+    min-height: 35px;
+    height: 100px;
+    border: 2px solid $lightBlue;
+    padding: 10px;
+    resize: vertical;
+    font-family: 'Caviar Dreams';
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    margin-bottom: 10px;
+}
+
+.commentButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.commentButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: $lightBlue;
+    color: white;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.newComment .eraseComment {
+    background-color: unset;
+    color: black;
+    border: 2px solid $lightBlue;
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+.disabledButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: $lightGray;
+    color: black;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+}
+
+@media (hover: hover) {
+    .commentButton:hover {
+        background-color: $darkBlue;
+        color: white;
+    }
+}
+
+.commentButton:active {
+    background-color: $darkBlue;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .reviewsContainer {
+        max-width: 700px;
+        margin-top: 40px;
+    }
+
+    .userComments {
+        max-height: 700px;
+        margin-bottom: 40px;
+    }
+
+    .userComment {
+        margin-bottom: 15px;
+    }
+
+    .userName {
+        font-size: map-get($map: $font-size-tablet, $key: 'm');
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: map-get($map: $font-size-tablet, $key: 'm');
+        margin-bottom: 20px;
+    }
+
+    .comment {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        margin-bottom: 15px;
+    }
+
+    #newCommentField {
+        min-height: 50px;
+        height: 150px;
+        padding: 15px;
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        margin-bottom: 15px;
+    }
+
+    .commentButton, .disabledButton {
+        height: 50px;
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .reviews {
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .reviewsContainer {
+        max-width: 1300px;
+        margin-top: 80px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .reviewsTitle {
+        text-align: right;
+    }
+
+    .userComments {
+        width: 48%;
+        max-height: 500px;
+        margin: 0px;
+    }
+
+    .userComment {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .userName {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .userRate {
+        justify-content: flex-end;
+    }
+
+    .newRate {
+        justify-content: flex-start;
+
+        .rateIcon {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+
+    h3 {
+        text-align: right;
+    }
+
+    .comment {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .noComment {
+        text-align: center;
+    }
+
+    .newComment {
+        width: 48%;
+    }
+
+    #newCommentField {
+        min-height: 50px;
+        height: 200px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}

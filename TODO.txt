@@ -1,0 +1,29 @@
+General
+    Mandar mails de verdad
+    Agregar monto de envío
+
+Header 100% Completo/Verificado
+
+Footer 100% Completo/Verificado
+
+Inicio 100% Completo/Verificado
+
+Productos 100% Completo/Verificado
+
+Productos Overview 100% Completo/Verificado
+
+Nosotros 100% Completo/Verificado
+
+Contacto 100% Completo/Verificado
+
+Términos y Condiciones 100% Completo/Verificado
+
+Login 100% Completo/Verificado
+
+Configuración 100% Completo/Verificado
+
+Compras 100% Completo/Verificado
+
+Carrito de Compras 100% Completo/Verificado
+
+Admin 100% Completo/Verificado

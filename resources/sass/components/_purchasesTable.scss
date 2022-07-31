@@ -1,0 +1,234 @@
+.purchasesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.purchasesTable {
+    width: clamp(240px, 100%, 400px);
+}
+
+.purchaseRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 3px solid $lightBlue;
+    border-bottom: unset;
+}
+
+.purchaseRow:last-child {
+    border-bottom: 3px solid $lightBlue;
+}
+
+.borderBottom {
+    border-bottom: 3px solid $lightBlue;
+}
+
+.indexRow {
+    color: white;
+    background-color: $lightBlue;
+}
+
+.indexRow .tableProperty {
+    border-bottom: 1px solid white;
+}
+
+.tableProperty {
+    font-size: map-get($map: $font-size-phone, $key: 'm');
+    padding: 10px 5px;
+    border-bottom: 1px solid $lightBlue;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+        color: $lightBlue;
+    }
+}
+
+.tableProperty:last-child {
+    border-bottom: unset;
+}
+
+.detailsButton {
+    margin: 10px 0px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    background-color: $lightBlue;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.productDetails {
+    width: 90%;
+    box-shadow: inset -1px -1px 5px 1px cadetblue;
+    margin: auto;
+}
+
+.productDetails:last-child {
+    border-bottom: 3px solid $lightBlue;
+}
+
+.noPurchases {
+    font-weight: 400;
+    color: $darkBlue;
+    font-size: map-get($map: $font-size-phone, $key: 'm');
+    text-align: center;
+    padding: 0px 20px 20px;
+}
+
+.noPurchasesLink {
+    color: $lightBlue;
+}
+
+@media (hover: hover) {
+
+    .tableImage a:hover {
+        filter: brightness(1.15);
+    }
+
+    .tableProperty a:hover {
+        text-decoration: underline;
+    }
+
+    .noPurchasesLink:hover {
+        text-decoration: underline;
+    }
+}
+
+.tableImage a:active {
+    filter: brightness(1.15);
+}
+
+.tableProperty a:active {
+    text-decoration: underline;
+}
+
+.noPurchasesLink:active {
+    text-decoration: underline;
+}
+
+.tableImage {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 10px;
+
+    a {
+        transition: filter 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgHorizontal {
+        height: auto;
+        width: 100%;
+    }
+
+    .imgVertical {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+
+    .purchasesTable {
+        width: clamp(240px, 100%, 700px);
+    }
+
+    .purchaseRow {
+        padding: 10px 30px;
+    }
+    
+    .tableProperty {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        padding: 15px 10px;
+    }
+    
+    .tableProperty:last-child {
+        margin-bottom: unset;
+    }
+    
+    .detailsButton {
+        margin: 15px 0px;
+        height: 50px;
+        font-size: map-get($map: $font-size-tablet, $key: 'xs');
+    }
+
+    .noPurchases {
+        font-size: map-get($map: $font-size-tablet, $key: 'm');
+        padding: 0px 40px 40px;
+    }
+
+    .tableImage {
+        width: 150px;
+        height: 150px;
+        margin: 15px auto 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+     
+    .purchasesTable {
+        width: clamp(240px, 100%, 1300px);
+    }
+
+    .purchaseRow {
+        padding: 15px 30px 25px;
+    }
+    
+    .indexRow .tableProperty {
+        border-bottom: unset;
+        border-right: 1px solid white;
+    }
+
+    .tableProperty:last-child {
+        border-right: unset;
+    }
+
+    .tableProperties {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .tableProperty {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border-bottom: unset;
+        border-right: 1px solid $lightBlue;
+    }
+    
+    .tableProperty:last-child {
+        margin-bottom: 0px;
+    }
+    
+    .detailsButton {
+        margin: 25px 0px 0px;
+    }
+
+    .noPurchases {
+        font-size: map-get($map: $font-size-pc, $key: 's');
+    }
+
+    .tableImage {
+        margin: 15px auto 30px;
+    }
+}

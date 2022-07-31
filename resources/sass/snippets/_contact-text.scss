@@ -1,0 +1,119 @@
+.contactContainer {
+
+    h1 {
+        font-family: 'Cinzel', serif;
+        font-size: map-get($map: $font-size-phone, $key: 'xl');
+        font-weight: 400;
+        text-align: center;
+        color: $darkBlue;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        font-size: map-get($font-size-phone , 'l');
+        margin-bottom: 10px;
+        color: $darkBlue;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .text {
+        text-align: right;
+
+        h2 {
+            margin-top: 0px;
+            text-align: right;
+        }
+    }
+
+    a {
+        transition: color 0.2s ease-in-out;
+    }
+
+    @media (hover: hover) {
+
+        a:hover {
+            color: $lightBlue;
+        }
+    }
+
+    a:active {
+        color: $lightBlue;
+    }
+
+    .socialMedia span {
+        display: inline-block;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        margin-right: 10px;
+        max-width: 50%;
+    }
+
+    .icon {
+        display: inline-block;
+        min-width: 15px;
+        min-height: 15px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .contactContainer {
+    
+        h1 {
+            font-size: map-get($map: $font-size-tablet, $key: 'xl');
+            margin-bottom: 40px;
+        }
+    
+        h2 {
+            font-size: map-get($font-size-tablet , 'l');
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        .socialMedia span {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-right: 15px;
+        }
+    
+        .icon {
+            min-width: 20px;
+            min-height: 20px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .contactContainer {
+    
+        h1 {
+            font-size: map-get($map: $font-size-pc, $key: 'xl');
+            margin-bottom: 80px;
+        }
+        
+        h2 {
+            font-size: map-get($font-size-pc , 'l');
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    
+        .text {
+            text-align: left;
+
+            h2 {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+        }
+    
+        .socialMedia span {
+            font-size: map-get($map: $font-size-pc, $key: 's');
+            margin-right: 20px;
+        }
+    }
+}

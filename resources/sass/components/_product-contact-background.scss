@@ -1,0 +1,51 @@
+.contentContainer {
+    width: clamp(240px, 100%, 400px);
+    height: 500px;
+    background-color: $lightGray;
+    display: flex;
+    flex-direction: column;
+
+    .graphicContainer {
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .textContainer {
+        width: 100%;
+        height: 60%;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .contentContainer {
+        height: 800px;
+        width: clamp(240px, 100%, 700px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+     
+    .contentContainer {
+        width: clamp(240px, 100%, 1300px);
+        height: 550px;
+        background-color: $lightGray;
+        display: flex;
+        flex-direction: row;
+    
+        .graphicContainer {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+    
+        .textContainer {
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caviar Dreams", sans-serif;
+  color: #202020;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  min-height: calc(100vh - 179px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+button {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 278px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 370px);
+  }
+}
+.contentContainer {
+  width: clamp(240px, 100%, 400px);
+  height: 500px;
+  background-color: #E9E9E9;
+  display: flex;
+  flex-direction: column;
+}
+.contentContainer .graphicContainer {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.contentContainer .textContainer {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .contentContainer {
+    height: 800px;
+    width: clamp(240px, 100%, 700px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contentContainer {
+    width: clamp(240px, 100%, 1300px);
+    height: 550px;
+    background-color: #E9E9E9;
+    display: flex;
+    flex-direction: row;
+  }
+  .contentContainer .graphicContainer {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .contentContainer .textContainer {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+}
+.mailForm {
+  margin: 0px auto;
+  width: clamp(240px, 100%, 400px);
+}
+.mailForm form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mailForm input, .mailForm textarea {
+  width: 100%;
+  border: 2px solid #31B4AC;
+  padding: 10px;
+  font-family: "Caviar Dreams";
+  font-size: 10px;
+}
+.mailForm input {
+  height: 35px;
+}
+.mailForm textarea {
+  resize: vertical;
+  min-height: 35px;
+}
+.mailForm label {
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+.mailForm button {
+  width: 100%;
+  height: 35px;
+  font-size: 10px;
+}
+.mailForm .disabled {
+  background-color: #E9E9E9;
+  color: #202020;
+}
+.mailForm .enabled {
+  background-color: #31B4AC;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .mailForm .enabled:hover {
+    background-color: #126963;
+  }
+}
+.mailForm .enabled:active {
+  background-color: #126963;
+}
+.mailForm .inputContainer {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.mailForm .messageContainer {
+  margin-bottom: 20px;
+}
+.mailForm .error {
+  width: 100%;
+  text-align: right;
+  font-size: 8px;
+  margin-top: 5px;
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .mailForm {
+    width: clamp(240px, 100%, 700px);
+  }
+  .mailForm input, .mailForm textarea {
+    border: 3px solid #31B4AC;
+    padding: 15px;
+    font-size: 16px;
+  }
+  .mailForm input {
+    height: 50px;
+  }
+  .mailForm textarea {
+    min-height: 50px;
+  }
+  .mailForm label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .mailForm button {
+    height: 50px;
+    font-size: 16px;
+  }
+  .mailForm .inputContainer {
+    margin-bottom: 15px;
+  }
+  .mailForm .nameContainer {
+    width: 50%;
+    padding-right: 10px;
+  }
+  .mailForm .emailContainer {
+    width: 50%;
+    padding-left: 10px;
+  }
+  .mailForm .messageContainer {
+    margin-bottom: 30px;
+  }
+  .mailForm .error {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mailForm {
+    width: clamp(240px, 100%, 1000px);
+  }
+  .mailForm input, .mailForm textarea {
+    padding: 20px;
+    font-size: 18px;
+  }
+  .mailForm label {
+    font-size: 18px;
+  }
+  .mailForm button {
+    font-size: 18px;
+  }
+  .mailForm .nameContainer, .mailForm .subjectContainer, .mailForm .emailContainer {
+    width: 33.33%;
+    padding: 0px;
+  }
+  .mailForm .nameContainer {
+    padding-right: 15px;
+  }
+  .mailForm .subjectContainer {
+    padding-left: 15px;
+  }
+  .mailForm .emailContainer {
+    padding: 0px 5px;
+  }
+  .mailForm .error {
+    font-size: 14px;
+  }
+}
+.contactContainer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactContainer .imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactContainer img {
+  width: auto;
+  height: 100%;
+}
+.contactContainer .text {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+.contactContainer .socialMedia {
+  margin-bottom: 10px;
+}
+.contactContainer .socialMedia:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .contactContainer {
+    padding: 40px;
+  }
+  .contactContainer img {
+    width: 100%;
+    height: auto;
+  }
+  .contactContainer .text {
+    right: 15px;
+    bottom: 40px;
+  }
+  .contactContainer .socialMedia {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactContainer {
+    padding: 80px;
+  }
+  .contactContainer img {
+    height: 100%;
+    width: auto;
+  }
+  .contactContainer .text {
+    left: 20px;
+    bottom: 80px;
+  }
+  .contactContainer .socialMedia {
+    margin-bottom: 20px;
+  }
+}
+.contactContainer h1 {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #126963;
+  margin-bottom: 20px;
+}
+.contactContainer h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #126963;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+.contactContainer .text {
+  text-align: right;
+}
+.contactContainer .text h2 {
+  margin-top: 0px;
+  text-align: right;
+}
+.contactContainer a {
+  transition: color 0.2s ease-in-out;
+}
+@media (hover: hover) {
+  .contactContainer a:hover {
+    color: #31B4AC;
+  }
+}
+.contactContainer a:active {
+  color: #31B4AC;
+}
+.contactContainer .socialMedia span {
+  display: inline-block;
+  font-size: 10px;
+  margin-right: 10px;
+  max-width: 50%;
+}
+.contactContainer .icon {
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .contactContainer h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .contactContainer h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  .contactContainer .socialMedia span {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .contactContainer .icon {
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactContainer h1 {
+    font-size: 34px;
+    margin-bottom: 80px;
+  }
+  .contactContainer h2 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .contactContainer .text {
+    text-align: left;
+  }
+  .contactContainer .text h2 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .contactContainer .socialMedia span {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+}

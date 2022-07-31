@@ -1,0 +1,274 @@
+.aboutContainer {
+    width: 100%;
+
+    /*General styles*/
+
+    .imgContainer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    .blurry {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 30%;
+        position: absolute;
+    }
+
+    .textContainer {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        background-color: $lightBlue;
+    }
+
+    .text {
+        position: absolute;
+        bottom: 20px;
+        width: calc(100% - 40px);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgCredits {
+        max-width: 90%;
+        overflow: auto;
+        color: white;
+        font-size: map-get($font-size-phone , 'xs');
+        text-align: right;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    h3 {
+        width: 100%;
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        font-size: map-get($font-size-phone , 'l');
+        margin-bottom: 10px;
+    }
+
+    p {
+        width: 100%;
+        font-size: map-get($font-size-phone , 's');
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        font-size: map-get($font-size-phone , 'xl');
+    }
+
+    .slogan, .ethicalValues, .team, .clients, .thanks {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Overwrited styles*/
+
+    .slogan, .thanks {
+        position: relative;
+
+        .text {
+            position: absolute;
+            width: 50%;
+            color: white;
+            bottom: unset;
+        }
+
+        h3, p {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .ethicalValues, .team, .clients {
+
+        .imgContainer {
+            width: 50%;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+
+        @media screen and (min-width:750px) {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .ethicalValues, .clients {
+
+        .textContainer {
+            background-color: $lightGray;
+        }
+
+        h3, p {
+            text-align: right;
+        }
+
+        .text {
+            right: 10px;
+        }
+    }
+
+    .team {
+
+        .text {
+            left: 10px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .aboutContainer {
+    
+        /*General styles*/
+    
+        .text {
+            bottom: 40px;
+            width: calc(100% - 60px);
+        }
+    
+        h3 {
+            font-size: map-get($font-size-tablet , 'l');
+            margin-bottom: 15px;
+        }
+    
+        p {
+            font-size: map-get($font-size-tablet , 's');
+            margin-bottom: 15px;
+        }
+    
+        h2 {
+            font-size: map-get($font-size-tablet , 'xl');
+        }
+    
+        .slogan, .ethicalValues, .team, .clients, .thanks {
+            height: 450px;
+        }
+
+        .ethicalValues, .team, .clients {
+    
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .imgCredits {
+            font-size: map-get($font-size-tablet , 'xs');
+        }
+    
+        /*Overwrited styles*/
+    
+        .ethicalValues, .clients {
+    
+            .text {
+                right: 15px;
+            }
+        }
+    
+        .team {
+    
+            .text {
+                left: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .aboutContainer {
+    
+        /*General styles*/
+    
+        .text {
+            bottom: 80px;
+            width: 50%;
+        }
+    
+        h3 {
+            font-size: map-get($font-size-pc , 'l');
+            margin-bottom: 20px;
+        }
+    
+        p {
+            font-size: map-get($font-size-pc , 's');
+            margin-bottom: 20px;
+        }
+    
+        h2 {
+            font-size: map-get($font-size-pc , 'xl');
+        }
+    
+        .slogan, .ethicalValues, .team, .clients, .thanks {
+            height: 550px;
+        }
+
+        .ethicalValues, .team, .clients {
+    
+            img {
+                width: auto;
+                height: 100%;
+            }
+
+            @media screen and (min-width: 1650px){
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    
+        /*Overwrited styles*/
+    
+        .slogan, .thanks {
+    
+            .text {
+                width: 30%;
+            }
+        }
+    
+        .ethicalValues, .clients {
+    
+            .text {
+                right: 20px;
+            }
+        }
+    
+        .team {
+    
+            .text {
+                left: 20px;
+            }
+        }
+    }
+}

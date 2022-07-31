@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caviar Dreams", sans-serif;
+  color: #202020;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  min-height: calc(100vh - 179px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+button {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 278px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 370px);
+  }
+}
+.purchasesContentContainer {
+  width: 100%;
+  padding: 20px;
+}
+.purchasesContentContainer h1 {
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #126963;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .purchasesContentContainer {
+    padding: 40px;
+  }
+  .purchasesContentContainer h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+.purchasesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.purchasesTable {
+  width: clamp(240px, 100%, 400px);
+}
+
+.purchaseRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 3px solid #31B4AC;
+  border-bottom: unset;
+}
+
+.purchaseRow:last-child {
+  border-bottom: 3px solid #31B4AC;
+}
+
+.borderBottom {
+  border-bottom: 3px solid #31B4AC;
+}
+
+.indexRow {
+  color: white;
+  background-color: #31B4AC;
+}
+
+.indexRow .tableProperty {
+  border-bottom: 1px solid white;
+}
+
+.tableProperty {
+  font-size: 12px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #31B4AC;
+  display: flex;
+  justify-content: flex-end;
+}
+.tableProperty a {
+  color: #31B4AC;
+}
+
+.tableProperty:last-child {
+  border-bottom: unset;
+}
+
+.detailsButton {
+  margin: 10px 0px;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 10px;
+  background-color: #31B4AC;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.productDetails {
+  width: 90%;
+  box-shadow: inset -1px -1px 5px 1px cadetblue;
+  margin: auto;
+}
+
+.productDetails:last-child {
+  border-bottom: 3px solid #31B4AC;
+}
+
+.noPurchases {
+  font-weight: 400;
+  color: #126963;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px 20px 20px;
+}
+
+.noPurchasesLink {
+  color: #31B4AC;
+}
+
+@media (hover: hover) {
+  .tableImage a:hover {
+    filter: brightness(1.15);
+  }
+
+  .tableProperty a:hover {
+    text-decoration: underline;
+  }
+
+  .noPurchasesLink:hover {
+    text-decoration: underline;
+  }
+}
+.tableImage a:active {
+  filter: brightness(1.15);
+}
+
+.tableProperty a:active {
+  text-decoration: underline;
+}
+
+.noPurchasesLink:active {
+  text-decoration: underline;
+}
+
+.tableImage {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto 10px;
+}
+.tableImage a {
+  transition: filter 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tableImage .imgHorizontal {
+  height: auto;
+  width: 100%;
+}
+.tableImage .imgVertical {
+  height: 100%;
+  width: auto;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .purchasesTable {
+    width: clamp(240px, 100%, 700px);
+  }
+
+  .purchaseRow {
+    padding: 10px 30px;
+  }
+
+  .tableProperty {
+    font-size: 16px;
+    padding: 15px 10px;
+  }
+
+  .tableProperty:last-child {
+    margin-bottom: unset;
+  }
+
+  .detailsButton {
+    margin: 15px 0px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .noPurchases {
+    font-size: 20px;
+    padding: 0px 40px 40px;
+  }
+
+  .tableImage {
+    width: 150px;
+    height: 150px;
+    margin: 15px auto 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .purchasesTable {
+    width: clamp(240px, 100%, 1300px);
+  }
+
+  .purchaseRow {
+    padding: 15px 30px 25px;
+  }
+
+  .indexRow .tableProperty {
+    border-bottom: unset;
+    border-right: 1px solid white;
+  }
+
+  .tableProperty:last-child {
+    border-right: unset;
+  }
+
+  .tableProperties {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tableProperty {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-bottom: unset;
+    border-right: 1px solid #31B4AC;
+  }
+
+  .tableProperty:last-child {
+    margin-bottom: 0px;
+  }
+
+  .detailsButton {
+    margin: 25px 0px 0px;
+  }
+
+  .noPurchases {
+    font-size: 18px;
+  }
+
+  .tableImage {
+    margin: 15px auto 30px;
+  }
+}

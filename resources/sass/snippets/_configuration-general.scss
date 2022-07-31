@@ -1,0 +1,380 @@
+.configurationContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $darkBlue;
+        font-size: map-get($font-size-phone , 'xl');
+        width: 100%;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+    }
+
+    .configurationContent {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formSection {
+        width: 100%;
+        margin: 30px 0px;
+    }
+
+    .titleSection {
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 400;
+            text-align: center;
+            font-size: map-get($map: $font-size-phone, $key: 'l');
+            color: $darkBlue;
+            margin-bottom: 10px;
+        }
+    }
+
+    .formContainer {
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        margin-bottom: 10px;
+    }
+
+    .inputContainer {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .loginLabel {
+        display: inline-block;
+        width: 100%;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+    }
+
+    .loginInput {
+        width: 100%;
+        height: 35px;
+        border: 2px solid $lightBlue;
+        padding: 0px 10px;
+        font-family: 'Caviar Dreams', sans-serif;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+    }
+
+    .actionsContent {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .registerButton {
+        width: 100%;
+        color: white;
+        padding: 8px 10px;
+        background-color: $lightBlue;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .cancelButton {
+        width: 100%;
+        color: white;
+        padding: 8px 10px;
+        background-color: $danger;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .userAddressContainer {
+        width: 100%;
+        padding: 15px;
+        background-color: $lightGray;
+
+        &:nth-child(2) {
+            padding-top: 30px;
+        }
+    }
+
+    .usserAddressInfo {
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        margin-bottom: 15px;
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    .userAddressOptions {
+        color: $lightBlue;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $lightBlue;
+
+        div {
+            margin-left: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    .TFButtonContainer {
+        width: 100%;
+    }
+
+    .twoFactorTitle {
+        background-color: $lightGray;
+        text-align: center;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .qrContainer {
+        width: 100%;
+        height: 240px;
+        padding: 10px 0px 20px;
+    }
+
+    .qrCode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sesionModal {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color: $lightGray;
+    }
+
+    .modalContainer {
+        margin-bottom: 10px;
+    }
+
+    hr {
+        width: calc(100% - 20px);
+        border-color: $lightBlue;
+        border-width: 1px;
+    }
+
+    .errorMessage {
+        text-align: right;
+        color: $danger;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        margin: 5px 0px 10px;
+    }
+    
+    .actionMessage {
+        font-size: map-get($map: $font-size-phone, $key: 's');
+    }
+
+    .sessionContainer {
+        background-color: $lightGray;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .session {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sessionIcon {
+        width: 100px;
+        height: 100px;
+        color: $lightBlue;
+    }
+
+    @media (hover: hover) {
+
+        .cancelButton:hover {
+            background-color: $dangerDark;
+        }
+
+        .registerButton:hover {
+            background-color: $darkBlue;
+        }
+
+        .userAddressOptions div:hover {
+            color: $darkBlue;
+        }
+    }
+
+    .registerButton:active {
+        background-color: $darkBlue;
+    }
+
+    .cancelButton:active {
+        background-color: $dangerDark;
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .configurationContainer {
+        padding: 40px;
+    
+        h1 {
+            font-size: map-get($font-size-tablet , 'xl');
+        }
+    
+        .formSection {
+            margin: 40px 0px;
+        }
+    
+        .titleSection {
+    
+            h3 {
+                font-size: map-get($map: $font-size-tablet, $key: 'l');
+                margin-bottom: 15px;
+            }
+        }
+    
+        .formContainer {
+            padding: 15px 15px 0px 15px;
+        }
+    
+        .description {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 15px;
+        }
+    
+        .inputContainer {
+            margin-bottom: 15px;
+        }
+    
+        .loginLabel {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 5px;
+        }
+    
+        .loginInput {
+            height: 50px;
+            padding: 0px 15px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+    
+        .actionsContent {
+            margin-top: 15px;
+        }
+    
+        .registerButton {
+            height: 50px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            padding: 12px 15px;
+            margin-top: 15px;
+        }
+    
+        .cancelButton {
+            height: 50px;
+            padding: 12px 15px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-top: 15px;
+        }
+
+        .userAddressContainer {
+            padding: 30px;
+
+            &:nth-child(2) {
+                padding-top: 60px;
+            }
+        }
+    
+        .usserAddressInfo {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 25px;
+    
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    
+        .userAddressOptions {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $lightBlue;
+
+            i {
+                font-size: map-get($map: $font-size-tablet, $key: 'm');
+            }
+    
+            div {
+                margin-left: 20px;
+                cursor: pointer;
+            }   
+        }
+    
+        .twoFactorTitle {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+    
+        .qrContainer {
+            height: 340px;
+            padding: 15px 0px 30px;
+        }
+    
+        .qrCode {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    
+        .sesionModal {
+            margin-top: 30px;
+            padding: 30px;
+        }
+    
+        .modalContainer {
+            margin-bottom: 15px;
+        }
+    
+        hr {
+            width: calc(100% - 40px);
+        }
+    
+        .errorMessage {
+            font-size: map-get($map: $font-size-tablet, $key: 'xs');
+            margin: 5px 0px 15px;
+        }
+        
+        .actionMessage {
+            font-size: map-get($map: $font-size-tablet, $key: 'xs');
+        }
+    
+        .sessionContainer {
+            padding: 15px 15px 0px 15px;
+        }
+    
+        .sessionIcon {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

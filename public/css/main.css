@@ -1,0 +1,584 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caviar Dreams", sans-serif;
+  color: #202020;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  min-height: calc(100vh - 179px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+button {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 278px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 370px);
+  }
+}
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #31B4AC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .logoContainer {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+header .logoContainer img {
+  width: 100%;
+  height: auto;
+}
+header .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .icon {
+  color: white;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+header .icon a {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+header .iconDisabled {
+  color: #126963;
+  cursor: default;
+}
+header nav, header .loginItems {
+  border: 1px solid white;
+  border-top: unset;
+  width: 30%;
+  height: auto;
+  background-color: #31B4AC;
+  position: absolute;
+  top: 50px;
+  right: -30%;
+  z-index: 3;
+  padding: 0px 10px;
+}
+header .menuItems {
+  width: 100%;
+}
+header .menuItem, header .loginItem {
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+}
+header .menuItem a, header .menuItem span, header .loginItem a, header .loginItem span {
+  text-align: right;
+  padding: 10px 0px;
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-size: 10px;
+  transition: color 0.2s ease-in-out;
+}
+header .menuItem span, header .loginItem span {
+  color: #126963;
+}
+header .menuItem:last-child, header .loginItem:last-child {
+  margin-bottom: 20px;
+}
+header .hidden {
+  opacity: 0%;
+  right: -30%;
+  transition: opacity 0.5s ease-in-out, right 1s ease-in-out;
+}
+header .visible {
+  opacity: 100%;
+  right: 0;
+  transition: opacity 0.75s ease-in-out, right 0.75s ease-in-out;
+}
+header .searchFieldContainer {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100vw;
+  z-index: 4;
+  filter: opacity(100%);
+  transition: top 0.5s ease-in-out, filter 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+header .searchField {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .searchButton {
+  width: 20%;
+  height: 100%;
+  background-color: #31B4AC;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+header #productSearch {
+  border: unset;
+  font-family: "Caviar Dreams", sans;
+  border: 3px solid #31B4AC;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+header .matchedProduct {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 3px solid #31B4AC;
+  border-top: unset;
+  display: flex;
+  transition: filter 0.3s ease-in-out;
+}
+header .matchedProductImage {
+  min-width: 50px;
+  width: 50px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .matchedProductImage .imgHorizontal {
+  width: 100%;
+  height: auto;
+}
+header .matchedProductImage .imgVertical {
+  width: auto;
+  height: 100%;
+}
+header .productInfo {
+  width: 100%;
+  font-size: 10px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header .productInfo p:first-child {
+  margin-bottom: 5px;
+}
+header .productInfo .name {
+  width: 100%;
+  max-height: 22px;
+  overflow-y: auto;
+}
+header .productInfo .oldPrice {
+  margin-left: 10px;
+  color: crimson;
+  text-decoration: line-through;
+}
+header .searchBarHidden {
+  top: 20px;
+  visibility: hidden;
+  filter: opacity(0%);
+}
+@media (hover: hover) {
+  header .icon:hover {
+    color: #126963;
+  }
+  header .icon a:hover {
+    color: #126963;
+  }
+  header .menuItem > a:hover, header .loginItem a:hover {
+    color: #126963;
+    text-decoration: underline;
+  }
+  header .productLink:hover {
+    filter: brightness(80%);
+  }
+  header .searchButton:hover {
+    background-color: #126963;
+  }
+}
+header .icon:active {
+  color: #126963;
+}
+header .icon a:active {
+  color: #126963;
+}
+header .menuItem > a:active, header .loginItem a:active {
+  color: #126963;
+  text-decoration: underline;
+}
+header .productLink:active {
+  filter: brightness(80%);
+}
+header .searchButton:active {
+  background-color: #126963;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  header .logoContainer {
+    width: 170px;
+    height: 50px;
+  }
+  header .icon {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  header nav, header .loginItems {
+    top: 80px;
+    padding: 0px 20px;
+  }
+  header .menuItem, header .loginItem {
+    margin-top: 15px;
+  }
+  header .menuItem a, header .menuItem span, header .loginItem a, header .loginItem span {
+    padding: 20px 0px;
+    font-size: 16px;
+  }
+  header .menuItem:last-child, header .loginItem:last-child {
+    margin-bottom: 20px;
+  }
+  header .searchFieldContainer {
+    top: 80px;
+  }
+  header .searchField {
+    height: 50px;
+  }
+  header .searchButton {
+    width: 10%;
+    font-size: 16px;
+  }
+  header #productSearch {
+    font-size: 16px;
+    padding: 0px 10px;
+  }
+  header .matchedProduct {
+    height: 80px;
+  }
+  header .matchedProductImage {
+    min-width: 80px;
+    width: 80px;
+  }
+  header .productInfo {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  header .productInfo p:first-child {
+    margin-bottom: 7px;
+  }
+  header .productInfo .oldPrice {
+    margin-left: 20px;
+  }
+  header .searchBarHidden {
+    top: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 100px;
+  }
+  header .logoContainer {
+    width: 250px;
+    height: 80px;
+  }
+  header .icons {
+    margin: 0px 20px 30px 0px;
+  }
+  header .icon {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  header .icons > .icon:last-child {
+    display: none;
+  }
+  header nav {
+    border: unset;
+    width: auto;
+    height: auto;
+    background-color: #31B4AC;
+    top: 60px;
+    right: 20px;
+  }
+  header .menuItems {
+    color: white;
+    text-align: right;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menuItem {
+    margin: 0px 40px 0px 0px;
+    padding: 0px;
+    border-bottom: none;
+  }
+  header .menuItem a, header .menuItem span {
+    padding: 0px;
+    color: white;
+    font-size: 22px;
+  }
+  header .menuItem span {
+    color: #126963;
+    text-decoration: none;
+  }
+  header .menuItem:last-child {
+    padding: 0px;
+    margin: 0px;
+  }
+  header .loginItems {
+    top: 100px;
+    padding: 0px 40px;
+  }
+  header .loginItem {
+    margin-top: 20px;
+  }
+  header .loginItem a, header .loginItem span {
+    padding: 30px 0px;
+    font-size: 18px;
+  }
+  header .loginItem:last-child {
+    margin-bottom: 30px;
+  }
+  header .hidden {
+    visibility: visible;
+  }
+  header .searchFieldContainer {
+    top: 100px;
+  }
+  header .searchBarHidden {
+    top: 50px;
+  }
+}
+footer {
+  width: 100%;
+  background-color: #31B4AC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+footer .logoContainer {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  overflow: hidden;
+}
+footer .logoContainer img {
+  width: 100%;
+  height: auto;
+}
+footer .icons {
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .creditCards, footer .socialMedias {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: white;
+}
+footer .creditCard, footer .socialMedia {
+  padding-right: 10px;
+}
+footer .socialMedia:last-child {
+  padding-right: 0px;
+}
+footer .socialMedia a {
+  color: white;
+}
+footer a {
+  transition: color 0.3s ease-in-out;
+}
+footer .termsAndCond {
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+}
+footer .termsAndCond > a {
+  color: white;
+}
+@media (hover: hover) {
+  footer a:hover {
+    color: #126963;
+  }
+  footer .termsAndCond a:hover {
+    text-decoration: underline;
+  }
+}
+footer a:active {
+  color: #126963;
+}
+footer .termsAndCond a:active {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 15px;
+  }
+  footer .logoContainer {
+    width: 170px;
+    height: 50px;
+    margin: 15px 0px;
+  }
+  footer .icons {
+    padding: 15px;
+  }
+  footer .creditCards, footer .socialMedias {
+    font-size: 20px;
+  }
+  footer .creditCard, footer .socialMedia {
+    padding-right: 15px;
+  }
+  footer .termsAndCond {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 20px;
+  }
+  footer .logoContainer {
+    width: 250px;
+    height: 80px;
+    margin: 20px 0px;
+  }
+  footer .icons {
+    padding: 20px;
+  }
+  footer .creditCards, footer .socialMedias {
+    font-size: 25px;
+  }
+  footer .creditCard, footer .socialMedia {
+    padding-right: 20px;
+  }
+  footer .termsAndCond {
+    padding-top: 20px;
+    font-size: 18px;
+  }
+}
+.loginContainer {
+  color: black;
+}
+.loginContainer .loginContent {
+  background-color: #E9E9E9;
+}
+.loginContainer .logoContainer {
+  width: 170px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.loginContainer .logoContainer img {
+  width: 100%;
+  height: auto;
+}
+.loginContainer .loginLabel {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+}
+.loginContainer .loginInput {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #31B4AC;
+}
+.loginContainer .registerButton {
+  color: white;
+  padding: 8px 10px;
+  background-color: #31B4AC;
+  border-radius: 5px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+.loginContainer .terms-privacy {
+  text-align: right;
+}
+.loginContainer span, .loginContainer a {
+  font-size: 14px;
+}
+.loginContainer a {
+  color: #31B4AC;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+@media (hover: hover) {
+  .loginContainer a:hover {
+    color: #126963;
+  }
+  .loginContainer .registerButton:hover {
+    background-color: #126963;
+  }
+}
+.loginContainer a:active {
+  color: #126963;
+}
+.loginContainer .registerButton:active {
+  background-color: #126963;
+}

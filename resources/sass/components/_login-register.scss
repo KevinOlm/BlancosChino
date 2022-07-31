@@ -1,0 +1,73 @@
+.loginContainer {
+    color: black;
+
+    .loginContent {
+        background-color: $lightGray;
+    }
+
+    .logoContainer {
+        width: 170px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .loginLabel {
+        display: inline-block;
+        width: 100%;
+        font-size: map-get($map: $font-size-phone, $key: 'xl');
+    }
+
+    .loginInput {
+        width: 100%;
+        height: 40px;
+        border: 2px solid $lightBlue;
+    }
+
+    .registerButton {
+        color: white;
+        padding: 8px 10px;
+        background-color: $lightBlue;
+        border-radius: 5px;
+        margin-left: 20px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .terms-privacy {
+        text-align: right;
+    }
+
+    span, a {
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+    }
+
+    a {
+        color: $lightBlue;
+        text-decoration: underline;
+        transition: color 0.2s ease-in-out;
+    }
+
+    @media (hover: hover) {
+        a:hover {
+            color: $darkBlue;
+        }
+
+        .registerButton:hover {
+            background-color: $darkBlue;
+        }
+    }
+
+    a:active {
+        color: $darkBlue;
+    }
+
+    .registerButton:active {
+        background-color: $darkBlue;
+    }
+}

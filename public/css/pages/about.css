@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caviar Dreams", sans-serif;
+  color: #202020;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  min-height: calc(100vh - 179px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+button {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 278px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 370px);
+  }
+}
+.aboutContainer {
+  width: 100%;
+  /*General styles*/
+  /*Overwrited styles*/
+}
+.aboutContainer .imgContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.aboutContainer .blurry {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 30%;
+  position: absolute;
+}
+.aboutContainer .textContainer {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: #31B4AC;
+}
+.aboutContainer .text {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}
+.aboutContainer img {
+  width: 100%;
+  height: auto;
+}
+.aboutContainer .imgCredits {
+  max-width: 90%;
+  overflow: auto;
+  color: white;
+  font-size: 8px;
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.aboutContainer h3 {
+  width: 100%;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.aboutContainer p {
+  width: 100%;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.aboutContainer h2 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.aboutContainer .slogan, .aboutContainer .ethicalValues, .aboutContainer .team, .aboutContainer .clients, .aboutContainer .thanks {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutContainer .slogan, .aboutContainer .thanks {
+  position: relative;
+}
+.aboutContainer .slogan .text, .aboutContainer .thanks .text {
+  position: absolute;
+  width: 50%;
+  color: white;
+  bottom: unset;
+}
+.aboutContainer .slogan h3, .aboutContainer .slogan p, .aboutContainer .thanks h3, .aboutContainer .thanks p {
+  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .aboutContainer .slogan, .aboutContainer .thanks {
+    width: auto;
+    height: 100%;
+  }
+}
+.aboutContainer .ethicalValues .imgContainer, .aboutContainer .team .imgContainer, .aboutContainer .clients .imgContainer {
+  width: 50%;
+}
+.aboutContainer .ethicalValues img, .aboutContainer .team img, .aboutContainer .clients img {
+  width: auto;
+  height: 100%;
+}
+@media screen and (min-width: 750px) {
+  .aboutContainer .ethicalValues img, .aboutContainer .team img, .aboutContainer .clients img {
+    width: 100%;
+    height: auto;
+  }
+}
+.aboutContainer .ethicalValues .textContainer, .aboutContainer .clients .textContainer {
+  background-color: #E9E9E9;
+}
+.aboutContainer .ethicalValues h3, .aboutContainer .ethicalValues p, .aboutContainer .clients h3, .aboutContainer .clients p {
+  text-align: right;
+}
+.aboutContainer .ethicalValues .text, .aboutContainer .clients .text {
+  right: 10px;
+}
+.aboutContainer .team .text {
+  left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutContainer {
+    /*General styles*/
+    /*Overwrited styles*/
+  }
+  .aboutContainer .text {
+    bottom: 40px;
+    width: calc(100% - 60px);
+  }
+  .aboutContainer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .aboutContainer p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .aboutContainer h2 {
+    font-size: 28px;
+  }
+  .aboutContainer .slogan, .aboutContainer .ethicalValues, .aboutContainer .team, .aboutContainer .clients, .aboutContainer .thanks {
+    height: 450px;
+  }
+  .aboutContainer .ethicalValues img, .aboutContainer .team img, .aboutContainer .clients img {
+    width: auto;
+    height: 100%;
+  }
+  .aboutContainer .imgCredits {
+    font-size: 12px;
+  }
+  .aboutContainer .ethicalValues .text, .aboutContainer .clients .text {
+    right: 15px;
+  }
+  .aboutContainer .team .text {
+    left: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutContainer {
+    /*General styles*/
+    /*Overwrited styles*/
+  }
+  .aboutContainer .text {
+    bottom: 80px;
+    width: 50%;
+  }
+  .aboutContainer h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .aboutContainer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .aboutContainer h2 {
+    font-size: 34px;
+  }
+  .aboutContainer .slogan, .aboutContainer .ethicalValues, .aboutContainer .team, .aboutContainer .clients, .aboutContainer .thanks {
+    height: 550px;
+  }
+  .aboutContainer .ethicalValues img, .aboutContainer .team img, .aboutContainer .clients img {
+    width: auto;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 1650px) {
+  .aboutContainer .ethicalValues img, .aboutContainer .team img, .aboutContainer .clients img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutContainer .slogan .text, .aboutContainer .thanks .text {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutContainer .ethicalValues .text, .aboutContainer .clients .text {
+    right: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutContainer .team .text {
+    left: 20px;
+  }
+}

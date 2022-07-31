@@ -1,0 +1,19 @@
+.productOverviewContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.noProduct {
+    text-align: center;
+    max-width: 700px;
+}
+
+@media screen and (min-width: 768px) {
+    .productOverviewContainer {
+        padding: 40px;
+    }
+}

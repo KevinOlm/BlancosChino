@@ -1,0 +1,426 @@
+header {
+    width: 100%;
+    height: 50px;
+    background-color: $lightBlue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logoContainer {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        color: white;
+        margin-right: 10px;
+        font-size: 15px;
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+
+        a {
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    .iconDisabled {
+        color: $darkBlue;
+        cursor: default;
+    }
+
+    nav, .loginItems {
+        border: 1px solid white;
+        border-top: unset;
+        width: 30%;
+        height: auto;
+        background-color: $lightBlue;
+        position: absolute;
+        top: 50px;
+        right: -30%;
+        z-index: 3;
+        padding: 0px 10px;
+    }
+
+    .menuItems {
+        width: 100%;
+    }
+
+    .menuItem, .loginItem{
+        width: 100%;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+
+        a, span {
+            text-align: right;
+            padding: 10px 0px;
+            display: inline-block;
+            width: 100%;
+            color: white;
+            font-size: map-get($font-size-phone , 's');
+            transition: color 0.2s ease-in-out;
+        }
+
+        span {
+            color: $darkBlue;
+        }
+    }
+
+    .menuItem:last-child, .loginItem:last-child {
+        margin-bottom: 20px;
+    }
+
+    .hidden {
+        opacity: 0%;
+        right: -30%;
+        transition: opacity 0.5s ease-in-out, right 1s ease-in-out;
+    }
+
+    .visible {
+        opacity: 100%;
+        right: 0;
+        transition: opacity 0.75s ease-in-out, right 0.75s ease-in-out;
+    }
+
+    .searchFieldContainer {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 100vw;
+        z-index: 4;
+        filter: opacity(100%);
+        transition: top 0.5s ease-in-out, filter 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .searchField {
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .searchButton {
+        width: 20%;
+        height: 100%;
+        background-color: $lightBlue;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #productSearch {
+        border: unset;
+        font-family: 'Caviar Dreams', sans;
+        border: 3px solid $lightBlue;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        width: 100%;
+        height: 100%;
+        padding: 0px 5px;
+        display: flex;
+        align-items: center;
+        outline: none;
+    }
+
+    .matchedProduct {
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border: 3px solid $lightBlue;
+        border-top: unset;
+        display: flex;
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .matchedProductImage {
+        min-width: 50px;
+        width: 50px;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .imgHorizontal {
+            width: 100%;
+            height: auto;
+        }
+
+        .imgVertical {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .productInfo {
+        width: 100%;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        p:first-child {
+            margin-bottom: 5px;
+        }
+
+        .name {
+            width: 100%;
+            max-height: 22px;
+            overflow-y: auto;
+        }
+
+        .oldPrice {
+            margin-left: 10px;
+            color: crimson;
+            text-decoration: line-through;
+        }
+    }
+
+    .searchBarHidden {
+        top: 20px;
+        visibility: hidden;
+        filter: opacity(0%);
+    }
+
+    @media (hover:hover) {
+
+        .icon:hover {
+            color: $darkBlue;
+        }
+
+        .icon a:hover {
+            color: $darkBlue;
+        }
+
+        .menuItem>a:hover, .loginItem a:hover {
+            color: $darkBlue;
+            text-decoration: underline;
+        }
+
+        .productLink:hover {
+            filter: brightness(80%);
+        }
+
+        .searchButton:hover {
+            background-color: $darkBlue;
+        }
+    }
+
+    .icon:active {
+        color: $darkBlue;
+    }
+
+    .icon a:active {
+        color: $darkBlue;
+    }
+
+    .menuItem>a:active, .loginItem a:active {
+        color: $darkBlue;
+        text-decoration: underline;
+    }
+
+    .productLink:active {
+        filter: brightness(80%);
+    }
+
+    .searchButton:active {
+        background-color: $darkBlue;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 80px;
+    
+        .logoContainer {
+            width: 170px;
+            height: 50px;
+        }
+    
+        .icon {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+    
+        nav, .loginItems {
+            top: 80px;
+            padding: 0px 20px;
+        }
+    
+        .menuItem, .loginItem {
+            margin-top: 15px;
+    
+            a, span {
+                padding: 20px 0px;
+                font-size: map-get($font-size-tablet , 's');
+            }
+        }
+
+        .menuItem:last-child, .loginItem:last-child {
+            margin-bottom: 20px;
+        }
+
+        .searchFieldContainer {
+            top: 80px
+        }
+
+        .searchField {
+            height: 50px;
+        }
+
+        .searchButton {
+            width: 10%;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+
+        #productSearch {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            padding: 0px 10px;
+        }
+    
+        .matchedProduct {
+            height: 80px;
+        }
+    
+        .matchedProductImage {
+            min-width: 80px;
+            width: 80px;
+        }
+    
+        .productInfo {
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+            padding: 10px 15px;
+    
+            p:first-child {
+                margin-bottom: 7px;
+            }
+
+            .oldPrice {
+                margin-left: 20px;
+            }
+        }
+
+        .searchBarHidden {
+            top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        height: 100px;
+    
+        .logoContainer {
+            width: 250px;
+            height: 80px;
+        }
+
+        .icons {
+            margin: 0px 20px 30px 0px;
+        }
+    
+        .icon {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .icons > .icon:last-child {
+            display: none;
+        }
+    
+        nav {
+            border: unset;
+            width: auto;
+            height: auto;
+            background-color: $lightBlue;
+            top: 60px;
+            right: 20px;
+        }
+    
+        .menuItems {
+            color: white;
+            text-align: right;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .menuItem {
+            margin: 0px 40px 0px 0px;
+            padding: 0px;
+            border-bottom: none;
+    
+            a, span {
+                padding: 0px;
+                color: white;
+                font-size: map-get($font-size-pc , 'm');
+            }
+
+            span {
+                color: $darkBlue;
+                text-decoration: none;
+            }
+        }
+
+        .menuItem:last-child {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .loginItems {
+            top: 100px;
+            padding: 0px 40px;
+        }
+    
+        .loginItem {
+            margin-top: 20px;
+    
+            a, span {
+                padding: 30px 0px;
+                font-size: map-get($font-size-pc , 's');
+            }
+        }
+
+        .loginItem:last-child {
+            margin-bottom: 30px;
+        }
+
+        .hidden {
+            visibility: visible;
+        }
+
+        .searchFieldContainer {
+            top: 100px;
+        }
+
+        .searchBarHidden {
+            top: 50px;
+        }
+    }
+}

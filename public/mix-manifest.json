@@ -1,0 +1,19 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/modules/slider.js": "/js/modules/slider.js",
+    "/js/modules/images.js": "/js/modules/images.js",
+    "/js/modules/categoriesHome.js": "/js/modules/categoriesHome.js",
+    "/js/modules/productOverview.js": "/js/modules/productOverview.js",
+    "/js/modules/shoppingcart.js": "/js/modules/shoppingcart.js",
+    "/js/admin/alerts.js": "/js/admin/alerts.js",
+    "/css/pages/products.css": "/css/pages/products.css",
+    "/css/pages/termsAndPrivacy.css": "/css/pages/termsAndPrivacy.css",
+    "/css/pages/about.css": "/css/pages/about.css",
+    "/css/pages/productOverview.css": "/css/pages/productOverview.css",
+    "/css/main.css": "/css/main.css",
+    "/css/app.css": "/css/app.css",
+    "/css/pages/purchases.css": "/css/pages/purchases.css",
+    "/css/pages/configuration.css": "/css/pages/configuration.css",
+    "/css/pages/home.css": "/css/pages/home.css",
+    "/css/pages/contact.css": "/css/pages/contact.css"
+}

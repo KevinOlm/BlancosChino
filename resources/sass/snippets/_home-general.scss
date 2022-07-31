@@ -1,0 +1,30 @@
+.mainContent {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        color: $darkBlue;
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+        font-weight: 400;
+        font-family: 'Cinzel', serif;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .mainContent {
+        width: 100%;
+        padding: 40px;
+    
+        h2 {
+            font-size: map-get($map: $font-size-tablet, $key: 'l');
+            margin-bottom: 40px;
+        }
+    }
+}

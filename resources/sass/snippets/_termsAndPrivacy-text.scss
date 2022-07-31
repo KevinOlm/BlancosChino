@@ -1,0 +1,100 @@
+.termsPrivacyContainer {
+
+    h1 {
+        color: $darkBlue;
+        margin-bottom: 20px;
+        font-size: map-get($font-size-phone , 'xl');
+        width: 100%;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: map-get($font-size-phone , 'l');
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .returnPolicyContainer p, .returnPolicyContainer h2, .returnPolicyContainer li {
+        color: white;
+        text-align: right;
+    }
+
+    p {
+        font-size: map-get($font-size-phone, 'm');
+        margin-bottom: 10px;
+    }
+
+    ul {
+        margin-bottom: 10px;
+    }
+
+    li {
+        font-size: map-get($font-size-phone, 'm');
+        margin-bottom: 5px;
+    }
+
+    .bold {
+        font-weight: 800;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .termsPrivacyContainer {
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: map-get($font-size-tablet , 'xl');
+        }
+        
+        h2 {
+            font-size: map-get($font-size-tablet , 'm');
+            margin-bottom: 15px;
+        }
+        
+        p {
+            font-size: map-get($font-size-tablet, 's');
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        li {
+            font-size: map-get($font-size-tablet, 's');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .termsPrivacyContainer {
+
+        h1 {
+            margin-bottom: 80px;
+            font-size: map-get($font-size-pc , 'xl');
+        }
+        
+        h2 {
+            font-size: map-get($font-size-pc , 'm');
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: map-get($font-size-pc, 's');
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: map-get($font-size-pc, 's');
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.productsPageContainer {
+    width: 100%;
+    padding: 20px;
+
+    h1 {
+        font-family: 'Cinzel', serif;
+        font-size: map-get($map: $font-size-phone, $key: 'xl');
+        font-weight: 400;
+        text-align: center;
+        color: $darkBlue;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .productsPageContainer {
+        padding: 40px;
+    
+        h1 {
+            font-size: map-get($map: $font-size-tablet, $key: 'xl');
+            margin-bottom: 40px;
+        }
+    }
+}

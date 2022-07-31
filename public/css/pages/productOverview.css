@@ -1,0 +1,755 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caviar Dreams", sans-serif;
+  color: #202020;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  min-height: calc(100vh - 179px);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+button {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 278px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 370px);
+  }
+}
+.productOverviewContainer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noProduct {
+  text-align: center;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 768px) {
+  .productOverviewContainer {
+    padding: 40px;
+  }
+}
+.contentContainer {
+  width: clamp(240px, 100%, 400px);
+  height: 500px;
+  background-color: #E9E9E9;
+  display: flex;
+  flex-direction: column;
+}
+.contentContainer .graphicContainer {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.contentContainer .textContainer {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .contentContainer {
+    height: 800px;
+    width: clamp(240px, 100%, 700px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contentContainer {
+    width: clamp(240px, 100%, 1300px);
+    height: 550px;
+    background-color: #E9E9E9;
+    display: flex;
+    flex-direction: row;
+  }
+  .contentContainer .graphicContainer {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .contentContainer .textContainer {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+}
+.productOverview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSelectionContainer {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  padding: 10px 10px 10px 20px;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.minImageContainer {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.minImageContainer:nth-child(2) {
+  margin-left: auto;
+}
+
+.minImageContainer:last-child {
+  margin-right: auto;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.text {
+  width: 80%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+h2 {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #126963;
+  margin-bottom: 10px;
+  max-height: 58px;
+  overflow: auto;
+}
+
+.rateIcons {
+  font-size: 10px;
+  color: #31B4AC;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.rateIcons p {
+  margin-right: 10px;
+}
+
+.rateIcon {
+  margin-right: 3px;
+}
+
+.rateIcon:last-child {
+  margin-right: 0px;
+}
+
+.description {
+  font-size: 10px;
+  margin-bottom: 10px;
+  max-height: 68px;
+  overflow: auto;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.price {
+  font-size: 14px;
+}
+
+.oldPrice {
+  font-size: 10px;
+  color: crimson;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  width: calc(100% - 20px);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.variations {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.variations select, .variations input {
+  width: 100%;
+  background-color: unset;
+  border: unset;
+  border-bottom: 1px solid #31B4AC;
+  padding: 10px;
+  font-family: "Caviar Dreams", sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.sizeVariation, .quantityVariation {
+  width: 45%;
+}
+
+.stock {
+  font-size: 8px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+
+.purchaseButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.addToCart, .purchaseNow {
+  width: 50%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: "Caviar Dreams", sans-serif;
+}
+
+.buttonText {
+  font-size: 10px;
+}
+
+.addToCart {
+  border: 2px solid #31B4AC;
+  transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+.purchaseNow {
+  background-color: #31B4AC;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.outOfStock {
+  background-color: #AFAFAF;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .addToCart:hover {
+    border: none;
+    background-color: #126963;
+    color: white;
+  }
+
+  .purchaseNow:hover {
+    background-color: #126963;
+  }
+}
+.addToCart:active {
+  border: none;
+  background-color: #126963;
+  color: white;
+}
+
+.purchaseNow:active {
+  background-color: #126963;
+}
+
+.swal2-popup .buttonsModalContainer {
+  width: 80%;
+  font-size: 10px;
+  font-family: "Caviar Dreams", sans-serif;
+}
+
+.swal2-popup .bold {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin-bottom: 15px;
+    max-height: 70px;
+    font-size: 24px;
+  }
+
+  .text {
+    top: 20px;
+    right: 15px;
+  }
+
+  .rateIcons {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .rateIcons p {
+    margin-right: 15px;
+  }
+
+  .rateIcon {
+    margin-right: 5px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-height: 100px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .oldPrice {
+    font-size: 16px;
+  }
+
+  .buttons {
+    width: calc(100% - 30px);
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .variations {
+    margin-bottom: 15px;
+  }
+  .variations select, .variations input {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .stock {
+    font-size: 12px;
+    bottom: 10px;
+  }
+
+  .addToCart, .purchaseNow, .outOfStock {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .buttonText {
+    font-size: 16px;
+  }
+
+  .imageSelectionContainer {
+    padding: 15px 15px 15px 30px;
+    height: 100px;
+  }
+
+  .minImageContainer {
+    min-width: 70px;
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .text {
+    text-align: left;
+    top: 30px;
+    left: 20px;
+  }
+
+  .rateIcons {
+    font-size: 18px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .rateIcons p {
+    margin-right: 20px;
+    position: absolute;
+    left: 140px;
+  }
+
+  .rateIcon {
+    margin-right: 5px;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .oldPrice {
+    font-size: 18px;
+  }
+
+  .stock {
+    font-size: 14px;
+    bottom: 15px;
+  }
+}
+.reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewsContainer {
+  width: 100%;
+  min-width: 240px;
+  max-width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewsTitle {
+  text-align: center;
+  width: 100%;
+}
+
+.userComments {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+.userComment {
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #31B4AC;
+  direction: ltr;
+}
+
+.userName {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.userRate {
+  justify-content: center;
+}
+
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #126963;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.newRate {
+  color: #E9E9E9;
+  justify-content: center;
+  direction: rtl;
+}
+.newRate .rateIcon {
+  margin-right: 0px;
+  margin-left: 3px;
+  transition: color 0.2s ease-in-out;
+}
+.newRate .rateIcon:last-child {
+  margin-left: 0px;
+}
+
+input:not(:checked) ~ .rateIcon:hover,
+input:not(:checked) ~ .rateIcon:hover ~ .rateIcon {
+  color: #31B4AC;
+}
+
+input:checked ~ .rateIcon {
+  color: #31B4AC;
+}
+
+.comment {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.rateInput {
+  display: none;
+}
+
+.newComment {
+  width: 100%;
+}
+
+#newCommentField {
+  width: 100%;
+  min-height: 35px;
+  height: 100px;
+  border: 2px solid #31B4AC;
+  padding: 10px;
+  resize: vertical;
+  font-family: "Caviar Dreams";
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.commentButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.commentButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  background-color: #31B4AC;
+  color: white;
+  font-size: 10px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.newComment .eraseComment {
+  background-color: unset;
+  color: black;
+  border: 2px solid #31B4AC;
+  transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+.disabledButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  background-color: #E9E9E9;
+  color: black;
+  font-size: 10px;
+}
+
+@media (hover: hover) {
+  .commentButton:hover {
+    background-color: #126963;
+    color: white;
+  }
+}
+.commentButton:active {
+  background-color: #126963;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .reviewsContainer {
+    max-width: 700px;
+    margin-top: 40px;
+  }
+
+  .userComments {
+    max-height: 700px;
+    margin-bottom: 40px;
+  }
+
+  .userComment {
+    margin-bottom: 15px;
+  }
+
+  .userName {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .comment {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  #newCommentField {
+    min-height: 50px;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .commentButton, .disabledButton {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .reviewsContainer {
+    max-width: 1300px;
+    margin-top: 80px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .reviewsTitle {
+    text-align: right;
+  }
+
+  .userComments {
+    width: 48%;
+    max-height: 500px;
+    margin: 0px;
+  }
+
+  .userComment {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .userName {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .userRate {
+    justify-content: flex-end;
+  }
+
+  .newRate {
+    justify-content: flex-start;
+  }
+  .newRate .rateIcon {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  h3 {
+    text-align: right;
+  }
+
+  .comment {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  .noComment {
+    text-align: center;
+  }
+
+  .newComment {
+    width: 48%;
+  }
+
+  #newCommentField {
+    min-height: 50px;
+    height: 200px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+.image {
+  height: 100%;
+  width: auto;
+}
+
+.imgHorizontal {
+  height: auto;
+  width: 100%;
+}
+
+.imgVertical {
+  height: 100%;
+  width: auto;
+}

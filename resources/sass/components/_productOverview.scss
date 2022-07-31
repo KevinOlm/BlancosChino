@@ -1,0 +1,362 @@
+.productOverview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageSelectionContainer {
+    background-image: linear-gradient(to top, rgb(0, 0, 0, 50%), rgb(0, 0, 0, 0%));
+    padding: 10px 10px 10px 20px;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.minImageContainer {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.minImageContainer:nth-child(2) {
+    margin-left: auto;
+}
+
+.minImageContainer:last-child {
+    margin-right: auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.text {
+    width: 80%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: map-get($map: $font-size-phone, $key: 'l');
+    font-weight: 400;
+    color: $darkBlue;
+    margin-bottom: 10px;
+    max-height: 58px;
+    overflow: auto;
+}
+
+.rateIcons {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    color: $lightBlue;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        margin-right: 10px;
+    }
+}
+
+.rateIcon {
+    margin-right: 3px;
+}
+
+.rateIcon:last-child {
+    margin-right: 0px;
+}
+
+.description {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    margin-bottom: 10px;
+    max-height: 68px;
+    overflow: auto;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.price {
+    font-size: map-get($map: $font-size-phone, $key: 'l');
+}
+
+.oldPrice {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    color: crimson;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.variations {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    select, input {
+        width: 100%;
+        background-color: unset;
+        border: unset;
+        border-bottom: 1px solid $lightBlue;
+        padding: 10px;
+        font-family: 'Caviar Dreams', sans-serif;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        cursor: pointer;
+    }
+}
+
+.sizeVariation, .quantityVariation {
+    width: 45%;
+}
+
+.stock {
+    font-size: map-get($map: $font-size-phone, $key: 'xs');
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+
+.purchaseButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.addToCart, .purchaseNow {
+    width: 50%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    font-family: 'Caviar Dreams', sans-serif;
+}
+
+.buttonText {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+}
+
+.addToCart {
+    border: 2px solid $lightBlue;
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+.purchaseNow {
+    background-color: $lightBlue;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.outOfStock {
+    background-color: $darkGray;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (hover: hover) {
+    .addToCart:hover {
+        border: none;
+        background-color: $darkBlue;
+        color: white;
+    }
+    
+    .purchaseNow:hover {
+        background-color: $darkBlue;
+    }
+}
+
+.addToCart:active {
+    border: none;
+    background-color: $darkBlue;
+    color: white;
+}
+
+.purchaseNow:active {
+    background-color: $darkBlue;
+}
+
+.swal2-popup .buttonsModalContainer {
+    width: 80%;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    font-family: 'Caviar Dreams', sans-serif;
+}
+
+.swal2-popup .bold {
+    font-weight: 600;
+}
+
+@media screen and (min-width:768px) {
+    h2 {
+        margin-bottom: 15px;
+        max-height: 70px;
+        font-size: map-get($map: $font-size-tablet, $key: 'l');
+    }
+
+    .text {
+        top: 20px;
+        right: 15px;
+    }
+
+    .rateIcons {
+        p {
+            margin-right: 15px;
+        }
+
+        font-size: map-get($map: $font-size-tablet, $key: 'm');
+        margin-bottom: 15px;
+    }
+
+    .rateIcon {
+        margin-right: 5px;
+    }
+
+    .description {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        margin-bottom: 15px;
+        max-height: 100px;
+    }
+
+    .price {
+        font-size: map-get($map: $font-size-tablet, $key: 'l');
+    }
+
+    .oldPrice {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+    }
+
+    .buttons {
+        width: calc(100% - 30px);
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .variations {
+        margin-bottom: 15px;
+
+        select, input {
+            padding: 15px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+    }
+
+    .stock {
+        font-size: map-get($map: $font-size-tablet, $key: 'xs');
+        bottom: 10px;
+    }
+
+    .addToCart, .purchaseNow, .outOfStock {
+        height: 50px;
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+    }
+
+    .buttonText {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+    }
+
+    .imageSelectionContainer {
+        padding: 15px 15px 15px 30px;
+        height: 100px;
+    }
+    
+    .minImageContainer {
+        min-width: 70px;
+        width: 70px;
+        height: 70px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h2 {
+        margin-bottom: 20px;
+        font-size: map-get($map: $font-size-pc, $key: 'm');
+    }
+
+    .text {
+        text-align: left;
+        top: 30px;
+        left: 20px;
+    }
+
+    .rateIcons {
+        font-size: map-get($map: $font-size-pc, $key: 's');
+        margin-bottom: 20px;
+        justify-content: flex-start;
+        position: relative;
+
+        p {
+            margin-right: 20px;
+            position: absolute;
+            left: 140px;
+        }
+    }
+
+    .rateIcon {
+        margin-right: 5px;
+    }
+
+    .description {
+        font-size: map-get($map: $font-size-pc, $key: 's');
+        margin-bottom: 20px;
+    }
+
+    .price {
+        font-size: map-get($map: $font-size-pc, $key: 'l');
+    }
+
+    .oldPrice {
+        font-size: map-get($map: $font-size-pc, $key: 's');
+    }
+
+    .stock {
+        font-size: map-get($map: $font-size-pc, $key: 'xs');
+        bottom: 15px;
+    }
+}

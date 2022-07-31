@@ -1,0 +1,415 @@
+.productsContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: 'Cinzel', serif;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        font-weight: 400;
+        text-align: right;
+        color: $darkBlue;
+    }
+
+    .filters {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .categoryFilter, .sortFilter {
+        width: 45%;
+    }
+
+    select {
+        width: 100%;
+        background-color: unset;
+        border: unset;
+        border-bottom: 1px solid $lightBlue;
+        padding: 10px;
+        font-family: 'Caviar Dreams', sans-serif;
+        font-size: map-get($map: $font-size-phone, $key: 's');
+        cursor: pointer;
+    }
+
+    .cartButtons {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .total {
+        font-size: map-get($map: $font-size-phone, $key: 'l');
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .purchaseButton, .cleanCartButton {
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: map-get($map: $font-size-phone, $key: 'm');
+        cursor: pointer;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .purchaseButton {
+        width: 75%;
+        background-color: $lightBlue;
+        color: white;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .cleanCartButton {
+        width: 25%;
+        border: 2px solid $lightBlue;
+        transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    @media (hover: hover) {
+        .cleanCartButton:hover {
+            border: none;
+            background-color: $darkBlue;
+            color: white;
+        }
+        
+        .purchaseButton:hover {
+            background-color: $darkBlue;
+        }
+    }
+    
+    .cleanCartButton:active {
+        border: none;
+        background-color: $darkBlue;
+        color: white;
+    }
+    
+    .purchaseButton:active {
+        background-color: $darkBlue;
+    }
+
+    .chargingText {
+        margin-top: 10px;
+    }
+
+    .productsContainer {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 490px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+
+        @media screen and (max-width:375px) {
+            flex-direction: column;
+        }
+    }
+
+    .noProductsTitle {
+        text-align: center;
+    }
+
+    .noProductsLink {
+        color: $lightBlue;
+    }
+
+    @media (hover: hover) {
+        .noProductsLink:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .noProductsLink:active {
+        text-decoration: underline;
+    }
+
+    .paginationContainer {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paginationNav {
+        display: inline-block;
+        width: auto;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .pagination {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .disabled, .active {
+            background-color: $darkBlue;
+        }
+        
+        li {
+            height: 30px;
+            width: 30px;
+        }
+
+        button, span {
+            font-family: 'Caviar Dreams', sans-serif;
+            font-size: map-get($map: $font-size-phone, $key: 's');
+            font-weight: 500;
+            height: 100%;
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: $lightBlue;
+        }
+
+        button:hover {
+            color: black;
+            background-color: $lightGray;
+        }
+    }
+
+    .smHidden {
+        display: none;
+    }
+}
+
+.popUpTitle {
+    font-family: 'Cinzel', serif;
+    font-size: map-get($map: $font-size-phone, $key: 'm');
+    font-weight: 400;
+    color: $darkBlue;
+}
+
+.popUpSubtitle {
+    font-family: 'Cinzel', serif;
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    font-weight: 400;
+    color: $darkBlue;
+    margin-bottom: 15px;
+}
+
+.swal2-popup .buttonsModalContainer {
+    width: 80%;
+}
+
+.negativeAnswer, .positiveAnswer {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+    font-family: 'Caviar Dreams', sans-serif;
+    width: 50%;
+    height: 35px;
+    cursor: pointer;
+}
+
+.negativeAnswer {
+    border: 1px solid $lightBlue;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;;
+}
+
+.positiveAnswer {
+    background-color: $lightBlue;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .negativeAnswer:hover, .positiveAnswer:hover {
+        background-color: $darkBlue;
+        color: white;
+    }
+}
+
+.negativeAnswer:active, .positiveAnswer:active {
+    background-color: $darkBlue;
+    color: white;
+}
+
+.popUpDescription {
+    font-size: map-get($map: $font-size-phone, $key: 's');
+}
+
+.productSummary {
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+
+    .productsContentContainer {
+    
+        h2 {
+            font-size: map-get($map: $font-size-tablet, $key: 'm');
+        }
+    
+        .filters {
+            width: 100%;
+            max-width: 600px;
+        }
+    
+        select {
+            padding: 20px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+
+        .cartButtons {
+            max-width: 600px;
+        }
+    
+        .total {
+            font-size: map-get($map: $font-size-tablet, $key: 'm');
+            margin-bottom: 15px;
+        }
+    
+        .purchaseButton, .cleanCartButton {
+            height: 50px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+
+        .chargingText {
+            margin-top: 15px;
+        }
+    
+        .productsContainer {
+            margin-top: 40px;
+            max-width: 965px;
+            padding-left: 15px;
+        }
+
+        .paginationContainer {
+            margin-top: 15px;
+        }
+    
+        .paginationNav {
+            border-radius: 10px;
+        }
+    
+        .pagination {
+            
+            li {
+                height: 40px;
+                width: 40px;
+            }
+
+            button, span {
+                font-size: map-get($map: $font-size-tablet, $key: 's');
+            }
+        }
+
+        .smHidden {
+            display: flex;
+        }
+    }
+
+    .popUpTitle {
+        font-size: map-get($map: $font-size-tablet, $key: 'm');
+    }
+
+    .popUpSubtitle {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        margin-bottom: 20px;
+    }
+    
+    .negativeAnswer, .positiveAnswer {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+        height: 50px;
+    }
+
+    .popUpDescription {
+        font-size: map-get($map: $font-size-tablet, $key: 's');
+    }
+
+    .productSummary {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .productsContentContainer {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+    
+        h2 {
+            font-size: map-get($map: $font-size-pc, $key: 'm');
+        }
+    
+        .filters {
+            width: 20%;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .categoryFilter, .sortFilter {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        select {
+            width: 100%;
+            padding: 20px;
+            font-size: map-get($map: $font-size-tablet, $key: 's');
+        }
+
+        .cartButtons {
+            width: 20%;
+            max-width: 300px;
+            flex-direction: column;
+        }
+    
+        .total {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    
+        .purchaseButton, .cleanCartButton {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .chargingText {
+            margin-top: 0px;
+        }
+    
+        .productsContainer {
+            width: 80%;
+            margin: 0px;
+            padding-left: 80px;
+        }
+    
+        .paginationContainer {
+            margin-top: 20px;
+        }
+    }
+}

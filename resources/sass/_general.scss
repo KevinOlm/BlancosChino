@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('/../fonts/Cinzel/Cinzel-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('/../fonts/caviar_dreams/CaviarDreams.ttf');
+}
+
+$lightBlue: #31B4AC;
+$darkBlue: #126963;
+$lightGray: #E9E9E9;
+$darkGray: #AFAFAF;
+$black: #202020;
+$danger: #B53F3A;
+$dangerDark: #822D2A;
+
+$font-size-phone: (
+    "xxl": 18px,
+    "xl": 16px,
+    "l": 14px,
+    "m": 12px,
+    "s": 10px,
+    "xs": 8px,
+    "xxs": 6px
+);
+
+$font-size-tablet: (
+    "xxl": 32px,
+    "xl": 28px,
+    "l": 24px,
+    "m": 20px,
+    "s": 16px,
+    "xs": 12px,
+    "xxs": 10px
+);
+
+$font-size-pc: (
+    "xxl": 40px,
+    "xl": 34px,
+    "l": 28px,
+    "m": 22px,
+    "s": 18px,
+    "xs": 14px,
+    "xxs": 12px
+);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caviar Dreams', sans-serif;
+    color: $black;
+}
+
+.wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+main {
+    min-height: calc(100vh - 179px);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button {
+    border: none;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        min-height: calc(100vh - 278px);
+    }
+}
+
+@media screen and (min-width:1200px) {
+    main {
+        min-height: calc(100vh - 370px);
+    }
+}

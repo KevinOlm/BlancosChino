@@ -1,0 +1,80 @@
+.mainContent {
+
+    .scrollContainer {
+        width: 240px;
+        height: 486px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .categoriesContainer {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+
+    .scrollTop, .scrollBottom {
+        width: 40px;
+        height: 50px;
+        padding: 15px 0px;
+        position: absolute;
+        right: 0px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: map-get($map: $font-size-phone, $key: 'xl');
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .scrollTop {
+        background-image: linear-gradient(to top,rgba(20, 20, 20, 0), rgba(20, 20, 20, .4));
+        top: 0px;
+        align-items: flex-start;
+    }
+
+    .scrollBottom {
+        background-image: linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, .4));
+        bottom: 0px;
+        align-items: flex-end;
+    }
+
+    .categoriesContainer::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .mainContent {
+
+        .scrollContainer {
+            width: 615px;
+            height: 696px;
+            margin-bottom: 40px;
+        }
+
+        .scrollTop, .scrollBottom {
+            width: 50px;
+            height: 60px;
+            font-size: map-get($map: $font-size-tablet, $key: 'xl');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .mainContent {
+
+        .scrollContainer {
+            width: 930px;
+        }
+    }
+}
